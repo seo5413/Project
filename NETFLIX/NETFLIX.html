@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NETFLIX</title>
+    <style>
+    body {
+        margin: 0;
+        position: relative;
+        min-height: 100vh;
+        overflow-x: hidden;
+        mask-image: linear-gradient(rgb(217, 217, 217) 78.62%, rgba(115, 115, 115, 0) 100%);
+        
+    }
+
+    body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        background-image: url("background.jpg");
+        background-size: cover;
+        background-position: center;
+        filter: blur(10px);
+        opacity: 0.7;
+
+    }
+
+    body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* 어두운 반투명 레이어 */
+}
+    header{
+        display: flex;
+        justify-content: space-between;
+    }
+    header nav ul{
+        display: flex;
+        text-align: center;
+        list-style-type: none;
+    }
+    header nav ul li{
+        padding: 20px 10px;
+        width: 80px;
+        
+    }
+    header img{
+        width: 150px;
+        height: 80px;
+    }
+    .language,
+    .login {
+    padding: 8px 16px;
+    background: rgba(20, 20, 20, 0.7);
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    }
+    .intro{
+        background-image: url(background.jpg);
+        color: white;
+        text-align: left;
+        padding: 0px 44px 48px;
+    }
+    .intro {
+        position: relative;
+        height: 27.25rem;
+        background: url("background.jpg") center center / cover no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    input{
+        font-size: 1rem;
+        line-height: 1.5;
+        width: 100%;
+        padding: 1.5rem 1rem 0.5rem;
+    }
+
+    .email {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+    }
+
+    .address {
+        padding: 12px 16px;
+        width: 30%;
+        border: none;
+        border-radius: 25px;
+        background-color: #3a3a3a;
+        color: white;
+        font-size: 16px;
+        outline: none;
+        text-align: center;
+    }
+
+    .start {
+        padding: 12px 40px;
+        border: none;
+        border-radius: 25px;
+        background-color: red;
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+     }
+
+     .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: #333;
+            border-radius: 10px;
+            margin: 20px auto;
+            color: white;
+            width: 70%;
+    }
+
+     .container .button {
+            padding: 0.25rem 1rem;
+            border: 2px solid white;
+            border-radius: 25px;
+            background-color: black;
+            color: white;
+            font-size: 0.875rem;
+            font-weight: 500;
+            cursor: pointer;
+            position: relative;
+    }
+        .list {
+        display: flex;
+        gap: 12px;
+        padding: 16px;
+        list-style: none;
+    }
+
+    .list li {
+        width: 150px;
+        height: 220px;
+        background-size: cover;
+        background-position: center;
+        border-radius: 8px;
+        overflow: hidden;
+        align-items: center;
+    }
+
+    .content-wrapper {
+  display: flex;
+  justify-content: center; 
+}
+.h3{
+    display: flex;
+    
+}
+.content-item {
+  width: 120px; 
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.content-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  display: block;
+}
+.poster-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px; 
+  padding: 20px;
+  flex-wrap: wrap; 
+}
+
+.poster {
+  position: relative;
+  width: 120px; 
+  flex-shrink: 0;
+}
+
+.poster img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+}
+
+.rank {
+  position: absolute;
+  top: -12px;
+  left: -12px;
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 5px black;
+}
+
+</style>
+</head>
+<body>
+    <header>
+            <img src="Netflix_Logo_RGB.png" title="넷플릭스 로고">
+            <nav>
+             <ul>
+                 <li class="language">
+                    <select>
+                        <option value="korea">한국어</option>
+                        <option value="english">ENGLISH</option>
+                    </select>
+                </li>
+                 <li class="login">
+                    <button>로그인</button>
+                 </li>
+             </ul>
+            </nav>
+    </header>
+
+    <div class="intro">
+        <div>
+            <h1>
+                <span style="font-size: 56px;">영화, 시리즈 등을 무제한으로</span>
+            </h1>
+            <p style="font-size: 24px;">5,500원으로 시작하세요. 멤버십은 언제든지 해지 가능합니다.</p>
+        </div>
+        <h3>
+            <span class="h3">시청하실 준비가 되셨나요? 멤버십을 등록하거나 재시작하려면 이메일 주소를 입력하세요.</span>
+        </h3>
+        <div class="email">
+            <input class="address" value="이메일 주소"/>
+            <button class="start">시작하기 ></button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div>
+            <h3 style="font-size: 16px;">5,500원이면 만날 수 있는 넷플릭스.</h3>
+            <p style="font-size: 14px;">몇 개의 중간 광고와 함께 요금도 절약하고 넷플릭스도 즐겨보세요.</p>
+        </div>
+        <div>
+            <button class="button">자세히 알아보기</button>
+        </div>
+    </div>
+    <h3 style="color: white;">지금 뜨는 콘텐츠<h3>
+        <div class="list-section">
+            <div class="content-wrapper poster-wrapper">
+                    <div class="poster">
+                        <span class="rank">1</span>
+                        <img src="폭싹 포스터.webp" alt="포스터1">
+                    </div>
+                    <div class="poster">
+                        <span class="rank">2</span>
+                        <img src="계시록 포스터.webp" alt="포스터1">
+                    </div>
+                    <div class="poster">
+                        <span class="rank">3</span>
+                        <img src="소방관 포스터.webp" alt="포스터1">
+                    </div>
+                    <div class="poster">
+                        <span class="rank">4</span>
+                        <img src="약한 영웅 포스터.webp" alt="포스터1">
+                    </div>
+                    <div class="poster">
+                        <span class="rank">5</span>
+                        <img src="중증외상센터 포스터.webp" alt="포스터1">
+                    </div>
+                </div>
+          </div>
+</body>
+</html>
