@@ -57,29 +57,68 @@
         width: 150px;
         height: 80px;
     }
+   
     .language,
     .login {
-    padding: 8px 16px;
-    background: rgba(20, 20, 20, 0.7);
-    color: #fff;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
+        display: inline-block;
+        padding: 10px 20px;
+        background: rgba(20, 20, 20, 0.7);
+        color: #fff;
+        border: solid;
+        border-color: white;
+        border-width: thin;
+        border-radius: 999px;
+        margin: 15px;
+        cursor: pointer;
     }
-    .intro{
-        background-image: url(background.jpg);
-        color: white;
-        text-align: left;
-        padding: 0px 44px 48px;
+
+    .login{
+        color: black;
+        background-color: white;
     }
     .intro {
-        position: relative;
-        height: 27.25rem;
-        background: url("background.jpg") center center / cover no-repeat;
         display: flex;
+        flex-direction: column;
         align-items: center;
+        text-align: center;
+        color: white;
+        background-image: url("background.jpg");
+        padding: 60px 30px;
+    }
+
+    .intro2 .centered-text {
+        text-align: center;       
+        white-space: nowrap;     
+        font-size: 18px;
+        width: 100%;
+        
+    }
+    .email {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        margin-top: 20px;
         justify-content: center;
     }
+
+    .address {
+        flex: 1;
+        padding: 16px;
+        font-size: 16px;
+        border-radius: 999px;
+        border: none;
+    }
+
+    .start {
+        padding: 16px 24px;
+        font-size: 18px;
+        background-color: red;
+        color: white;
+        border: none;
+        border-radius: 999px;
+        cursor: pointer;
+    }
+
     input{
         font-size: 1rem;
         line-height: 1.5;
@@ -87,11 +126,7 @@
         padding: 1.5rem 1rem 0.5rem;
     }
 
-    .email {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-    }
+   
 
     .address {
         padding: 12px 16px;
@@ -103,9 +138,12 @@
         font-size: 16px;
         outline: none;
         text-align: center;
+        opacity: 0.9;
+        font-weight: bold;
     }
 
     .start {
+        display: flex;
         padding: 12px 40px;
         border: none;
         border-radius: 25px;
@@ -114,34 +152,39 @@
         font-size: 16px;
         font-weight: bold;
         cursor: pointer;
-        display: flex;
         align-items: center;
         justify-content: center;
      }
 
-     .container {
-            display: flex;
-            justify-content: space-between;
-            padding: 20px;
-            background-color: #333;
-            border-radius: 10px;
-            margin: 20px auto;
-            color: white;
-            width: 70%;
+     .font {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background-color: #333;
+        border-radius: 10px;
+        margin: 20px auto;
+        color: white;
+        width: 70%;
     }
 
-     .container .button {
-            padding: 0.25rem 1rem;
-            border: 2px solid white;
-            border-radius: 25px;
-            background-color: black;
-            color: white;
-            font-size: 0.875rem;
-            font-weight: 500;
-            cursor: pointer;
-            position: relative;
+    .font-text {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
     }
-        .list {
+
+    .des {
+        padding: 6px 12px;
+        font-size: 14px;
+        background-color: black;
+        color: white;
+        border: 1px solid white;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+
+    .list {
         display: flex;
         gap: 12px;
         padding: 16px;
@@ -159,13 +202,10 @@
     }
 
     .content-wrapper {
-  display: flex;
-  justify-content: center; 
-}
-.h3{
-    display: flex;
-    
-}
+        display: flex;
+        justify-content: center; 
+    }
+
 .content-item {
   width: 120px; 
   flex-shrink: 0;
@@ -214,44 +254,43 @@
 <body>
     <header>
             <img src="Netflix_Logo_RGB.png" title="넷플릭스 로고">
-            <nav>
-             <ul>
-                 <li class="language">
-                    <select>
-                        <option value="korea">한국어</option>
-                        <option value="english">ENGLISH</option>
+            <div class="mypage">
+                   <select class="language">
+                       <option value="korea">한국어</option>
+                       <option value="english">ENGLISH</option>
                     </select>
-                </li>
-                 <li class="login">
-                    <button>로그인</button>
-                 </li>
-             </ul>
-            </nav>
+                   <button class="login">로그인</button>
+            </div>
     </header>
 
     <div class="intro">
         <div>
-            <h1>
-                <span style="font-size: 56px;">영화, 시리즈 등을 무제한으로</span>
-            </h1>
-            <p style="font-size: 24px;">5,500원으로 시작하세요. 멤버십은 언제든지 해지 가능합니다.</p>
+          <h1>
+            <span style="font-size: 56px;">영화, 시리즈 등을 무제한으로</span>
+          </h1>
+          <p style="font-size: 24px;">5,500원으로 시작하세요. 멤버십은 언제든지 해지 가능합니다.</p>
         </div>
-        <h3>
-            <span class="h3">시청하실 준비가 되셨나요? 멤버십을 등록하거나 재시작하려면 이메일 주소를 입력하세요.</span>
-        </h3>
-        <div class="email">
-            <input class="address" value="이메일 주소"/>
+      
+        <div class="intro2">
+          <h3>
+            <span class="h3">
+              시청할 준비가 되셨나요? 멤버십을 등록하거나 재시작하려면 이메일 주소를 입력하세요.
+            </span>
+          </h3>
+          <div class="email">
+            <input class="address" placeholder="이메일 주소"/>
             <button class="start">시작하기 ></button>
+          </div>
         </div>
-    </div>
+      </div>
 
-    <div class="container">
-        <div>
-            <h3 style="font-size: 16px;">5,500원이면 만날 수 있는 넷플릭스.</h3>
-            <p style="font-size: 14px;">몇 개의 중간 광고와 함께 요금도 절약하고 넷플릭스도 즐겨보세요.</p>
-        </div>
-        <div>
-            <button class="button">자세히 알아보기</button>
+    <div>
+        <div class="font">
+            <div class="font-text">
+                <h3 style="font-size: 16px;">5,500원이면 만날 수 있는 넷플릭스.</h3>
+                <p style="font-size: 14px;">몇 개의 중간 광고와 함께 요금도 절약하고 넷플릭스도 즐겨보세요.</p>
+            </div>
+            <button class="des">자세히 알아보기</button>
         </div>
     </div>
     <h3 style="color: white;">지금 뜨는 콘텐츠<h3>
